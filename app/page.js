@@ -5,16 +5,17 @@ export default function Home() {
     <>
       {/* TopNavBar */}
       <header className="fixed w-full top-0 z-[100] bg-black text-white shadow-md">
-        <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative min-h-[80px] py-2">
+        <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative h-[60px]">
           <div className="flex-1 flex justify-start items-center">
             <button className="hover:opacity-80 transition-opacity p-2">
               <span className="material-symbols-outlined text-2xl">search</span>
             </button>
           </div>
-          <a className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 py-2" href="#">
+          {/* Logo container overflowing the navbar slightly for a premium effect */}
+          <a className="absolute left-1/2 -translate-x-1/2 top-0 flex flex-col items-center justify-center h-[100px] bg-black px-6 rounded-b-xl shadow-lg" href="#">
             <img
               alt="Chocoblingblau Logo"
-              className="w-auto object-contain h-16"
+              className="w-auto object-contain h-24"
               src="https://lh3.googleusercontent.com/aida/ADBb0ujgIrScdYVy8rAlOSzi-bozZfvPFUnX7M815gC7R_BkYQKLwuGq0N8-rgvFw7BDK_-If0awFA9OYwnP6x6V4qPSpYuH9pB8chCR8yDudTNmyzN_NVhT6nHDvfrQTZblob0XFmUyOJhEicExPrs_I5no0p7CwFP4BUFfUv6SSlfeOnZDAeIlKguXaZOfNnQ-FZKSKinjFta8xmlrYZ3x-kCiNobD0ga2j92F_gVm9A8W93Uae57ImKTnpO3UC7I5heFgfFrWVMrfnQ"
             />
           </a>
@@ -64,7 +65,7 @@ export default function Home() {
             {/* Slide 1 (Custom Image) */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('/hero-custom.png')" }}
+              style={{ backgroundImage: "url('/alfajor-hero.png')" }}
             ></div>
             {/* Slide 2 */}
             <div
