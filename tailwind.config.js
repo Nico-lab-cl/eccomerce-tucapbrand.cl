@@ -87,6 +87,15 @@ module.exports = {
               "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
               "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
               "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+          },
+          "keyframes": {
+              "marquee": {
+                  "0%": { transform: "translateX(0%)" },
+                  "100%": { transform: "translateX(-50%)" }
+              }
+          },
+          "animation": {
+              "marquee": "marquee 20s linear infinite"
           }
       }
   },
