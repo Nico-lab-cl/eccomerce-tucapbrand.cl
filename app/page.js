@@ -65,7 +65,7 @@ export default function Home() {
             {/* Slide 1 (Custom Image) */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('/alfajor-hero.png')" }}
+              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0ugJluDCpIw5778CbYGM3YD5HPyj2m9R1LhfGbSz35oC92VY_Avaztq5RlRMJZ2BePXy8GnHiriFZQ5Iv3lupO63upBYCzDpAWwLVIfNUcxapQGZo6qvhUKGp0g9obS77ESGds8ApQ4sp2FmSapNCyaD3Eal8t4FXgaHK3zLTgQz7ot3_8G_pM3qpOW5YG8z5Tc1Kdv6VHqmZuWDKrk6Tw-jcJChp5qJX8bQaa4lqZKFzu5NvO_K4MEHEpne=s2048')" }}
             ></div>
             {/* Slide 2 */}
             <div
