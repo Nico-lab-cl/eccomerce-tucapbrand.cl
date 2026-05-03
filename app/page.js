@@ -58,9 +58,9 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="w-full pt-[130px]">
+      <main className="w-full pt-[100px]">
         {/* Hero Section (Carousel) */}
-        <section className="relative w-full h-[70vh] md:h-[80vh] overflow-hidden group">
+        <section className="relative w-full h-[85vh] md:h-[calc(100vh-100px)] overflow-hidden group">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
             {/* Slide 1 (Custom Image) */}
             <div
