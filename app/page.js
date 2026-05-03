@@ -60,7 +60,7 @@ export default function Home() {
 
       <main className="w-full pt-[100px]">
         {/* Promo Marquee */}
-        <div className="w-full bg-[#C68E4E] text-white py-2.5 overflow-hidden flex whitespace-nowrap">
+        <div className="w-full bg-[#C68E4E] text-white py-2.5 overflow-hidden flex whitespace-nowrap relative z-10 shadow-sm">
           <div className="animate-marquee inline-block font-['Epilogue'] text-sm tracking-widest uppercase font-semibold">
             Envíos a todo el país | GRATIS para compras superiores a $60.000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Envíos a todo el país | GRATIS para compras superiores a $60.000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </div>
         {/* Hero Section (Carousel) */}
-        <section className="relative w-full h-[85vh] md:h-[calc(100vh-100px)] overflow-hidden group">
+        <section className="relative w-full h-[85vh] md:h-[calc(100vh-100px)] overflow-hidden group -mt-[40px]">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
             {/* Slide 1 (Custom Image) */}
             <div
