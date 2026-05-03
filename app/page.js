@@ -61,10 +61,10 @@ export default function Home() {
         {/* Hero Section (Carousel) */}
         <section className="relative w-full h-[70vh] md:h-[80vh] overflow-hidden group">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
-            {/* Slide 1 */}
+            {/* Slide 1 (Custom Image) */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('/alfajor-hero.png')" }}
+              style={{ backgroundImage: "url('/hero-custom.png')" }}
             ></div>
             {/* Slide 2 */}
             <div
