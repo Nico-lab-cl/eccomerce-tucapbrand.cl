@@ -1,66 +1,38 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
-  const titleRef = useRef(null);
-
-  useEffect(() => {
-    const el = titleRef.current;
-    if (el) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(40px)';
-      requestAnimationFrame(() => {
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      });
-    }
-  }, []);
-
   return (
     <section className={styles.hero}>
-      {/* Left: Title Block */}
-      <div className={styles.titleBlock}>
-        <div className={styles.titleInner} ref={titleRef}>
-          <span className={styles.eyebrow}>SS26 COLLECTION</span>
-          <h1 className={styles.title}>
-            LATEST<br />DROPS
-          </h1>
-          <p className={styles.subtitle}>
-            Brutalist apparel engineered for the urban grid. 
-            No compromises. No filler. Just raw execution.
-          </p>
-          <div className={styles.ctas}>
-            <Link href="/releases" className="btn btn-primary btn-lg">
-              SHOP RELEASES
-            </Link>
-            <Link href="/headwear" className="btn btn-secondary btn-lg">
-              HEADWEAR
-            </Link>
-          </div>
+      <div className={styles.content}>
+        <span className="label-sm">Alfajores Artesanales de Autor</span>
+        <h1 className={styles.title}>
+          El arte del<br />
+          <span className={styles.accent}>alfajor</span>
+        </h1>
+        <p className={styles.subtitle}>
+          Elaborados a mano con chocolate belga, manjar de campo 
+          y recetas heredadas. Cada bocado es una experiencia.
+        </p>
+        <div className={styles.ctas}>
+          <Link href="/tienda" className="btn btn-primary">
+            Explorar Colección
+          </Link>
+          <Link href="/#historia" className="btn btn-outline">
+            Nuestra Historia
+          </Link>
         </div>
       </div>
-
-      {/* Right: Hero Image */}
-      <div className={styles.imageBlock}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src="/hero.png"
-            alt="TUCAP Streetwear Collection"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-          <div className={styles.imageOverlay} />
-        </div>
-        <div className={styles.imageTag}>
-          <span className="label-caps">EDITORIAL — VOL. 01</span>
-        </div>
+      <div className={styles.imageWrap}>
+        <Image
+          src="/alfajor-hero.png"
+          alt="Composición artesanal de alfajores premium Chocoblingblau"
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="50vw"
+          priority
+        />
       </div>
     </section>
   );

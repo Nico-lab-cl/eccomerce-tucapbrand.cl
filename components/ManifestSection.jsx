@@ -1,54 +1,60 @@
+import Link from 'next/link';
 import styles from './ManifestSection.module.css';
-
-const SPECS = [
-  { label: 'MATERIAL', value: '100% PREMIUM WOOL BLEND' },
-  { label: 'CONSTRUCTION', value: 'STRUCTURED HIGH CROWN' },
-  { label: 'FIT', value: '59FIFTY® FITTED' },
-  { label: 'VISOR', value: 'FLAT BRIM — GREY UNDERVISOR' },
-  { label: 'CLOSURE', value: 'FITTED — TRUE TO SIZE' },
-  { label: 'ORIGIN', value: 'DESIGNED IN NEW YORK CITY' },
-  { label: 'EDITION', value: 'LIMITED RUN — 250 UNITS' },
-];
 
 export default function ManifestSection() {
   return (
-    <section className={styles.section}>
-      {/* Header */}
-      <div className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.sectionTag}>003</span>
-          <h2 className="headline-lg">THE MANIFEST</h2>
-        </div>
-      </div>
-
-      <div className={styles.layout}>
-        {/* Left: Brand Statement */}
-        <div className={styles.statement}>
-          <p className={styles.statementText}>
-            TUCAP IS NOT A BRAND.<br />
-            IT IS A STRUCTURE.<br />
-            A GRID OF INTENTION<br />
-            BUILT ON CONCRETE<br />
-            AND RAW MATERIAL.
-          </p>
-          <div className={styles.statementMeta}>
-            <span className="label-caps" style={{ color: 'var(--secondary)' }}>EST. 2024</span>
-            <span className="label-caps" style={{ color: 'var(--outline)' }}>NEW YORK, NY</span>
+    <section id="historia" className={`section ${styles.section}`}>
+      <div className="container">
+        <div className={styles.layout}>
+          <div className={styles.story}>
+            <span className="label-sm">Nuestra Historia</span>
+            <h2 className="headline-lg" style={{ marginTop: '16px', marginBottom: '24px' }}>
+              De una receta familiar<br />a tu paladar.
+            </h2>
+            <p className="body-lg" style={{ marginBottom: '16px' }}>
+              En Chocoblingblau, creemos que un alfajor no es solo un dulce, 
+              es un ritual. Todo comenzó en la cocina de nuestra abuela, donde 
+              el aroma a manjar cociéndose lentamente llenaba la casa.
+            </p>
+            <p className="body-lg" style={{ marginBottom: '32px' }}>
+              Hoy, mantenemos viva esa tradición. Nuestras galletas se hornean 
+              diariamente, nuestro manjar sigue siendo de campo, y utilizamos 
+              exclusivamente chocolate belga de alta pureza para crear una 
+              experiencia sensorial inigualable.
+            </p>
+            <Link href="/sobre-nosotros" className="btn btn-outline">
+              Leer más sobre nosotros
+            </Link>
           </div>
-        </div>
 
-        {/* Right: Spec Sheet */}
-        <div className={styles.specs}>
-          <div className={styles.specsTitle}>
-            <span className="label-caps" style={{ color: 'var(--secondary)' }}>PRODUCT SPECIFICATIONS</span>
-          </div>
-          {SPECS.map((spec, i) => (
-            <div key={i} className={styles.specRow}>
-              <span className={styles.specLabel}>{spec.label}</span>
-              <span className={styles.specDivider} />
-              <span className={styles.specValue}>{spec.value}</span>
+          <div className={styles.specs}>
+            <div className={styles.specHeader}>
+              <span className="label-sm">El Ritual del Sabor</span>
             </div>
-          ))}
+            
+            <div className={styles.specList}>
+              <div className={styles.specRow}>
+                <span className={styles.specLabel}>COBERTURA</span>
+                <span className={styles.specValue}>Chocolate Belga (70% o Blanco)</span>
+              </div>
+              <div className={styles.specRow}>
+                <span className={styles.specLabel}>RELLENO</span>
+                <span className={styles.specValue}>Manjar de Campo Artesanal</span>
+              </div>
+              <div className={styles.specRow}>
+                <span className={styles.specLabel}>MASA</span>
+                <span className={styles.specValue}>Galleta Suave Tradicional</span>
+              </div>
+              <div className={styles.specRow}>
+                <span className={styles.specLabel}>ELABORACIÓN</span>
+                <span className={styles.specValue}>100% a Mano en Chile</span>
+              </div>
+              <div className={styles.specRow}>
+                <span className={styles.specLabel}>CADUCIDAD</span>
+                <span className={styles.specValue}>30 Días (Sin preservantes)</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

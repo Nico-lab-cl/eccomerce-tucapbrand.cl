@@ -1,19 +1,19 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'TUCAP — Brutalist Streetwear',
-  description: 'Premium streetwear headwear and apparel. Brutalist design. Designed in the grit. Built for the grid.',
-  keywords: ['streetwear', 'headwear', 'caps', 'fitted caps', 'urban fashion', 'TUCAP'],
+  title: 'Chocoblingblau — Premium Artisanal Alfajores',
+  description: 'Alfajores artesanales de autor. Elaborados con ingredientes nobles: chocolate belga, manjar de campo y recetas de familia. Envío a todo Chile.',
+  keywords: ['alfajores', 'alfajores artesanales', 'chocolate', 'manjar', 'dulce de leche', 'Chocoblingblau', 'confitería premium'],
   openGraph: {
-    title: 'TUCAP — Brutalist Streetwear',
-    description: 'Premium streetwear headwear and apparel.',
+    title: 'Chocoblingblau — Premium Artisanal Alfajores',
+    description: 'Alfajores artesanales de autor. Elaborados con ingredientes nobles.',
     type: 'website',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>{children}</body>
     </html>
   );

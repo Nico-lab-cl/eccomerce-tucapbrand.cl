@@ -5,53 +5,57 @@ import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      {/* Newsletter */}
-      <div className={styles.newsletter}>
-        <div className={styles.newsletterContent}>
-          <h2 className="headline-lg">JOIN THE GRID</h2>
-          <p className="body-md" style={{ color: 'var(--on-surface-variant)', marginTop: 'var(--space-2)' }}>
-            First access to new drops, exclusive releases, and the raw feed.
+    <footer id="contacto" className={styles.footer}>
+      <div className={`container ${styles.container}`}>
+        
+        <div className={styles.newsletter}>
+          <h3 className="headline-md">Únete a nuestra lista</h3>
+          <p className="body-md">
+            Recibe invitaciones a degustaciones exclusivas y lanzamientos de temporada.
           </p>
+          <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <input 
+              type="email" 
+              placeholder="Tu correo electrónico" 
+              className={styles.input}
+              required
+            />
+            <button type="submit" className="btn btn-primary">
+              Suscribirse
+            </button>
+          </form>
         </div>
-        <form className={styles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="email"
-            placeholder="EMAIL ADDRESS"
-            className={styles.newsletterInput}
-            aria-label="Email for newsletter"
-          />
-          <button type="submit" className="btn btn-primary">SUBSCRIBE</button>
-        </form>
+
+        <div className={styles.navGrid}>
+          <div className={styles.navCol}>
+            <span className="label-sm">Tienda</span>
+            <Link href="/tienda">Todos los Alfajores</Link>
+            <Link href="/tienda?categoria=cajas">Cajas de Regalo</Link>
+            <Link href="/tienda?categoria=corporativo">Pedidos Corporativos</Link>
+          </div>
+          
+          <div className={styles.navCol}>
+            <span className="label-sm">Marca</span>
+            <Link href="/#historia">Nuestra Historia</Link>
+            <Link href="/contacto">Contacto</Link>
+            <Link href="/faq">Preguntas Frecuentes</Link>
+          </div>
+        </div>
+
       </div>
 
-      {/* Footer Grid */}
-      <div className={styles.grid}>
-        <div className={styles.col}>
-          <span className={styles.colTitle}>NAVIGATE</span>
-          <Link href="/releases" className={styles.colLink}>Releases</Link>
-          <Link href="/headwear" className={styles.colLink}>Headwear</Link>
-          <Link href="/apparel" className={styles.colLink}>Apparel</Link>
-          <Link href="/about" className={styles.colLink}>About</Link>
-        </div>
-        <div className={styles.col}>
-          <span className={styles.colTitle}>LEGAL</span>
-          <Link href="/terms" className={styles.colLink}>Terms of Service</Link>
-          <Link href="/privacy" className={styles.colLink}>Privacy Policy</Link>
-          <Link href="/shipping" className={styles.colLink}>Shipping & Returns</Link>
-        </div>
-        <div className={styles.col}>
-          <span className={styles.colTitle}>CONTACT</span>
-          <a href="mailto:info@tucap.com" className={styles.colLink}>info@tucap.com</a>
-          <a href="https://instagram.com/tucap" className={styles.colLink} target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://twitter.com/tucap" className={styles.colLink} target="_blank" rel="noopener noreferrer">Twitter / X</a>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
       <div className={styles.bottom}>
-        <span className={styles.bottomText}>© {new Date().getFullYear()} TUCAP. ALL RIGHTS RESERVED.</span>
-        <span className={styles.bottomText}>BRUTALIST APPAREL. DESIGNED IN THE GRIT. BUILT FOR THE GRID.</span>
+        <div className="container">
+          <div className={styles.bottomContent}>
+            <span className={styles.copyright}>
+              © {new Date().getFullYear()} Chocoblingblau. Elaborado en Chile.
+            </span>
+            <div className={styles.legal}>
+              <Link href="/legal/privacidad">Privacidad</Link>
+              <Link href="/legal/terminos">Términos</Link>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

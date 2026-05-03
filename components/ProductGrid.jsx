@@ -1,87 +1,74 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProductGrid.module.css';
 
-const PRODUCTS = [
+const SABORES = [
   {
-    id: 1,
-    name: 'NY 59FIFTY "ROSES"',
-    slug: 'ny-59fifty-roses',
-    price: 65.00,
-    image: '/cap-roses.png',
-    tag: 'NEW',
+    name: 'Chocolate 70% Cacao',
+    slug: 'chocolate-70',
+    description: 'Cobertura de chocolate belga oscuro con manjar de campo.',
+    image: '/alfajor-chocolate.png',
+    price: '$2.900',
+    tag: '70% Cocoa',
   },
   {
-    id: 2,
-    name: 'SUPREME x NY 59FIFTY',
-    slug: 'supreme-ny-59fifty',
-    price: 85.00,
-    image: '/cap-supreme.png',
-    tag: 'COLLAB',
+    name: 'Chocolate Blanco',
+    slug: 'chocolate-blanco',
+    description: 'Delicada cobertura de chocolate blanco con manjar cremoso.',
+    image: '/alfajor-white.png',
+    price: '$2.900',
+    tag: 'Clásico',
   },
   {
-    id: 3,
-    name: 'LA 59FIFTY "STRAWBERRY"',
-    slug: 'la-59fifty-strawberry',
-    price: 65.00,
-    image: '/cap-strawberry.png',
-    tag: null,
-  },
-  {
-    id: 4,
-    name: 'WHITE SOX 2003 ALL-STAR',
-    slug: 'white-sox-allstar-2003',
-    price: 65.00,
-    image: '/cap-allstar.png',
-    tag: 'LIMITED',
+    name: 'Caramelo & Sal',
+    slug: 'caramelo-sal',
+    description: 'Caramelo dorado con un toque de flor de sal de Cáhuil.',
+    image: '/alfajor-caramel.png',
+    price: '$3.200',
+    tag: 'Premium',
   },
 ];
 
 export default function ProductGrid() {
   return (
-    <section className={styles.section}>
-      {/* Section Header */}
-      <div className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.sectionTag}>001</span>
-          <h2 className="headline-lg">LATEST DROPS</h2>
+    <section id="sabores" className={`section ${styles.section}`}>
+      <div className="container">
+        <div className={styles.header}>
+          <span className="label-sm">Nuestros Sabores</span>
+          <h2 className="headline-xl" style={{ marginTop: '12px' }}>
+            Tres expresiones<br />del alfajor perfecto
+          </h2>
+          <p className="body-lg" style={{ marginTop: '16px', maxWidth: '480px' }}>
+            Cada variedad es una receta única, elaborada con ingredientes 
+            seleccionados a mano y técnicas artesanales.
+          </p>
         </div>
-        <Link href="/releases" className={styles.viewAll}>
-          VIEW ALL →
-        </Link>
-      </div>
 
-      {/* Products */}
-      <div className={styles.grid}>
-        {PRODUCTS.map((product, i) => (
-          <Link
-            href={`/product/${product.slug}`}
-            key={product.id}
-            className={styles.card}
-            style={{ animationDelay: `${i * 0.1}s` }}
-          >
-            {product.tag && (
-              <span className={styles.tag}>{product.tag}</span>
-            )}
-            <div className={styles.imageWrap}>
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                style={{ objectFit: 'cover' }}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-            <div className={styles.info}>
-              <div>
-                <span className={styles.name}>{product.name}</span>
+        <div className={styles.grid}>
+          {SABORES.map((sabor) => (
+            <Link
+              key={sabor.slug}
+              href={`/product/${sabor.slug}`}
+              className={styles.card}
+            >
+              <div className={styles.imageWrap}>
+                <Image
+                  src={sabor.image}
+                  alt={sabor.name}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <span className={styles.price}>${product.price.toFixed(2)}</span>
-            </div>
-          </Link>
-        ))}
+              <div className={styles.cardInfo}>
+                <span className="chip">{sabor.tag}</span>
+                <h3 className={styles.cardName}>{sabor.name}</h3>
+                <p className={styles.cardDesc}>{sabor.description}</p>
+                <span className={styles.cardPrice}>{sabor.price}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
