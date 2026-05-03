@@ -1,0 +1,130 @@
+.section {
+  border-bottom: var(--border-width) solid var(--grid-line);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  border-bottom: var(--border-width) solid var(--grid-line);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.sectionTag {
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--secondary);
+  padding: var(--space-1) var(--space-3);
+  border: var(--border-width) solid var(--secondary);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Card */
+.card {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-right: var(--border-width) solid var(--grid-line);
+  display: block;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.card:hover .cardCta {
+  color: var(--secondary);
+}
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+}
+
+.cardImage img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 14, 13, 0.9) 0%,
+    rgba(15, 14, 13, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-8);
+  z-index: 2;
+}
+
+.cardLabel {
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.cardTitle {
+  font-family: var(--font-headline);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+}
+
+.cardCta {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--grid-line);
+    height: 400px;
+  }
+
+  .card:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,153 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+}
+
+/* Announcement Marquee */
+.announcement {
+  border-bottom: var(--border-width) solid var(--grid-line);
+  padding: var(--space-2) 0;
+  overflow: hidden;
+  background: var(--surface-lowest);
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: var(--border-width) solid var(--grid-line);
+}
+
+.logo {
+  font-family: var(--font-headline);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  gap: 0;
+}
+
+.link {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  padding: var(--space-3) var(--space-6);
+  border-left: var(--border-width) solid var(--grid-line);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.link:last-child {
+  border-right: var(--border-width) solid var(--grid-line);
+}
+
+.link:hover {
+  color: var(--primary);
+  background: var(--surface-container);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.cartBtn {
+  position: relative;
+  color: var(--on-surface-variant);
+  transition: color 0.15s ease;
+  padding: var(--space-2);
+}
+
+.cartBtn:hover {
+  color: var(--primary);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  background: var(--secondary);
+  color: var(--surface);
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-2);
+}
+
+.hamburgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburgerLineOpen1 {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.hamburgerLineOpen2 {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--surface);
+    border-bottom: var(--border-width) solid var(--grid-line);
+    z-index: 99;
+  }
+
+  .linksOpen {
+    display: flex;
+  }
+
+  .link {
+    border-left: none;
+    border-bottom: var(--border-width) solid var(--grid-line);
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .link:last-child {
+    border-right: none;
+  }
+}
