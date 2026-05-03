@@ -26,7 +26,7 @@ export default function HeroSection() {
       </div>
       <div className={styles.imageWrap}>
         <Image
-          src="/alfajor-hero.png"
+          src="/hero-image.png"
           alt="Composición artesanal de alfajores premium Chocoblingblau"
           fill
           style={{ objectFit: 'cover' }}

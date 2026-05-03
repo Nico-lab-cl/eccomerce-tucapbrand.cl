@@ -6,20 +6,20 @@ export default function Home() {
       {/* TopNavBar */}
       <header className="fixed w-full top-0 z-[100] bg-black text-white shadow-md">
         <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative h-[60px]">
-          <div className="flex-1 flex justify-start items-center">
+          {/* Logo container overflowing the navbar slightly for a premium effect */}
+          <div className="flex items-center justify-start">
+            <a className="absolute left-4 md:left-8 top-0 flex flex-col items-center justify-center h-[100px] bg-black px-4 rounded-b-xl shadow-lg" href="#">
+              <img
+                alt="Chocoblingblau Logo"
+                className="w-auto object-contain h-20"
+                src="https://lh3.googleusercontent.com/aida/ADBb0ujgIrScdYVy8rAlOSzi-bozZfvPFUnX7M815gC7R_BkYQKLwuGq0N8-rgvFw7BDK_-If0awFA9OYwnP6x6V4qPSpYuH9pB8chCR8yDudTNmyzN_NVhT6nHDvfrQTZblob0XFmUyOJhEicExPrs_I5no0p7CwFP4BUFfUv6SSlfeOnZDAeIlKguXaZOfNnQ-FZKSKinjFta8xmlrYZ3x-kCiNobD0ga2j92F_gVm9A8W93Uae57ImKTnpO3UC7I5heFgfFrWVMrfnQ"
+              />
+            </a>
+          </div>
+          <div className="flex-1 flex justify-end items-center space-x-4 md:space-x-6">
             <button className="hover:opacity-80 transition-opacity p-2">
               <span className="material-symbols-outlined text-2xl">search</span>
             </button>
-          </div>
-          {/* Logo container overflowing the navbar slightly for a premium effect */}
-          <a className="absolute left-1/2 -translate-x-1/2 top-0 flex flex-col items-center justify-center h-[100px] bg-black px-6 rounded-b-xl shadow-lg" href="#">
-            <img
-              alt="Chocoblingblau Logo"
-              className="w-auto object-contain h-24"
-              src="https://lh3.googleusercontent.com/aida/ADBb0ujgIrScdYVy8rAlOSzi-bozZfvPFUnX7M815gC7R_BkYQKLwuGq0N8-rgvFw7BDK_-If0awFA9OYwnP6x6V4qPSpYuH9pB8chCR8yDudTNmyzN_NVhT6nHDvfrQTZblob0XFmUyOJhEicExPrs_I5no0p7CwFP4BUFfUv6SSlfeOnZDAeIlKguXaZOfNnQ-FZKSKinjFta8xmlrYZ3x-kCiNobD0ga2j92F_gVm9A8W93Uae57ImKTnpO3UC7I5heFgfFrWVMrfnQ"
-            />
-          </a>
-          <div className="flex-1 flex justify-end items-center space-x-6">
             <button className="hover:opacity-80 transition-opacity p-2">
               <span className="material-symbols-outlined text-2xl">person</span>
             </button>
@@ -65,7 +65,7 @@ export default function Home() {
             {/* Slide 1 (Custom Image) */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0ugJluDCpIw5778CbYGM3YD5HPyj2m9R1LhfGbSz35oC92VY_Avaztq5RlRMJZ2BePXy8GnHiriFZQ5Iv3lupO63upBYCzDpAWwLVIfNUcxapQGZo6qvhUKGp0g9obS77ESGds8ApQ4sp2FmSapNCyaD3Eal8t4FXgaHK3zLTgQz7ot3_8G_pM3qpOW5YG8z5Tc1Kdv6VHqmZuWDKrk6Tw-jcJChp5qJX8bQaa4lqZKFzu5NvO_K4MEHEpne=s2048')" }}
+              style={{ backgroundImage: "url('/hero-image.png')" }}
             ></div>
             {/* Slide 2 */}
             <div
