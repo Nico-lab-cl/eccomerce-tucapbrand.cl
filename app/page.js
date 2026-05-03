@@ -4,17 +4,17 @@ export default function Home() {
   return (
     <>
       {/* TopNavBar */}
-      <header className="docked full-width top-0 sticky z-50 bg-black text-white">
-        <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative min-h-[160px] py-4">
+      <header className="fixed w-full top-0 z-[100] bg-black text-white shadow-md">
+        <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative min-h-[80px] py-2">
           <div className="flex-1 flex justify-start items-center">
             <button className="hover:opacity-80 transition-opacity p-2">
               <span className="material-symbols-outlined text-2xl">search</span>
             </button>
           </div>
-          <a className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 py-4" href="#">
+          <a className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 py-2" href="#">
             <img
               alt="Chocoblingblau Logo"
-              className="w-auto object-contain h-32"
+              className="w-auto object-contain h-16"
               src="https://lh3.googleusercontent.com/aida/ADBb0ujgIrScdYVy8rAlOSzi-bozZfvPFUnX7M815gC7R_BkYQKLwuGq0N8-rgvFw7BDK_-If0awFA9OYwnP6x6V4qPSpYuH9pB8chCR8yDudTNmyzN_NVhT6nHDvfrQTZblob0XFmUyOJhEicExPrs_I5no0p7CwFP4BUFfUv6SSlfeOnZDAeIlKguXaZOfNnQ-FZKSKinjFta8xmlrYZ3x-kCiNobD0ga2j92F_gVm9A8W93Uae57ImKTnpO3UC7I5heFgfFrWVMrfnQ"
             />
           </a>
@@ -28,7 +28,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="w-full border-t border-stone-800 py-4 hidden md:block">
+        <div className="w-full border-t border-stone-800 py-3 hidden md:block">
           <nav className="flex justify-center items-center space-x-12 font-['Epilogue'] text-xs font-semibold tracking-[0.1em] uppercase">
             <a className="hover:text-primary transition-colors" href="#">Inicio</a>
             <a className="hover:text-primary transition-colors" href="#">Tienda Online</a>
@@ -57,29 +57,29 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="w-full">
+      <main className="w-full pt-[130px]">
         {/* Hero Section (Carousel) */}
-        <section className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden group">
+        <section className="relative w-full h-[70vh] md:h-[80vh] overflow-hidden group">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
             {/* Slide 1 */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0ugJluDCpIw5778CbYGM3YD5HPyj2m9R1LhfGbSz35oC92VY_Avaztq5RlRMJZ2BePXy8GnHiriFZQ5Iv3lupO63upBYCzDpAWwLVIfNUcxapQGZo6qvhUKGp0g9obS77ESGds8ApQ4sp2FmSapNCyaD3Eal8t4FXgaHK3zLTgQz7ot3_8G_pM3qpOW5YG8z5Tc1Kdv6VHqmZuWDKrk6Tw-jcJChp5qJX8bQaa4lqZKFzu5NvO_K4MEHEpne')" }}
+              style={{ backgroundImage: "url('/alfajor-hero.png')" }}
             ></div>
             {/* Slide 2 */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0uj2KN3PAsrhuFEa4U2F5zL54iw-zAGEPaT3AvysMxMTk-QhozlODvA1Xe4RJVdZjjrJeQKuNvA-4rlnlPUuMl6eIPqLHRv2GBh1gBiqdUNyWcWeJuh81hTb9QWOgOn-o2VxKTpX39nhdWaMFirrqx_cjVeIzKKVSVyXvT_4oko7EAjTFka9ZgK6FrxDgDrvUFFPP4SsDvwtAGse1Yc2YUStGicmH78o04iIqvsgNYE9PA0cWxtL83KynFc')" }}
+              style={{ backgroundImage: "url('/alfajor-box.png')" }}
             ></div>
             {/* Slide 3 */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0ug-j60nUDS6QlG14Pk4QPt55QsVmbFZFyIr7mWB7N6AWGxjbqWbZDydvNXVItah9NeMladNnDUKxu5iAE6BVAm55lEAqfHFH229PQA6PG2kCoVJ2M3Np5yqNgz2J9sheG58v4Ug6s_KPngTXQvJcGgct_vTo_5c1phfiODX6mAPFRdFnax_Bh-QmYcCHICojmBdW0UXCRfuAgMr_6i2pgWWzyf6qQEEFdYDL5laGOSgM3o_Rzddm4t5EMka')" }}
+              style={{ backgroundImage: "url('/alfajor-wrapped.png')" }}
             ></div>
             {/* Slide 4 */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida/ADBb0ujBKNrUVtwC6Vqt0dyKk19ydjcB-VO5GXF8weqMCLCmyu8JJX7-9i_3DwB_4SmxJSDT0DgAhwh3m2BWi3tM5xiAOV7bf1pgV60xsA3erfW21O2hhdl7CZVyxHVWI4K_0b92S-5327VjYN6ZxIxW5uzpGZUNVDBoN8vwSj_ftvY55_cGCXNynXhKg4nd2BCSwAmqJPAn9pAGExZLY3BAYpzKyHTiPG8l8FNLuffLREwoZ7ag23zkzc5bEEeU')" }}
+              style={{ backgroundImage: "url('/alfajor-chocolate.png')" }}
             ></div>
           </div>
           <button className="absolute top-1/2 -translate-y-1/2 left-4 md:left-8 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm transition-all z-20 opacity-0 group-hover:opacity-100">
