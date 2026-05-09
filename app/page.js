@@ -11,7 +11,7 @@ export default function Home() {
       {/* TopNavBar */}
       <header className="fixed w-full top-0 z-[100] bg-white shadow-sm border-b border-stone-200">
         {/* Single bar: Logo | Nav Links | Icons */}
-        <div className="flex items-center justify-between w-full max-w-[1920px] mx-auto h-[56px] md:h-[60px] px-4 md:px-10 overflow-visible">
+        <div className="flex items-center justify-between w-full max-w-[1920px] mx-auto h-[66px] md:h-[80px] px-4 md:px-10 overflow-visible">
 
           {/* Logo — overflows the navbar */}
           <a className="flex-shrink-0 relative z-[101]" href="#">
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="w-full pt-[60px] md:pt-[65px]">
+      <main className="w-full pt-[66px] md:pt-[80px]">
         {/* Promo Marquee */}
         <div className="w-full bg-[#C68E4E] text-white py-2.5 overflow-hidden flex whitespace-nowrap relative z-10 shadow-sm">
           <div className="animate-marquee inline-block font-['Epilogue'] text-sm tracking-widest uppercase font-semibold">
