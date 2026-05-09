@@ -99,10 +99,10 @@ export default function Home() {
         {/* Hero Section (Carousel) */}
         <section className="relative w-full h-[85vh] md:h-[calc(100vh-100px)] overflow-hidden group -mt-[40px]">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
-            {/* Slide 1 (Custom Image) */}
+            {/* Slide 1 (Video/GIF Background) */}
             <div
-              className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('/hero-image.png')" }}
+              className="relative min-w-full h-full snap-start bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url('/hero-video.gif')" }}
             ></div>
             {/* Slide 2 */}
             <div
