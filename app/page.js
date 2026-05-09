@@ -1,22 +1,31 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
       {/* TopNavBar */}
       <header className="fixed w-full top-0 z-[100] bg-black text-white shadow-md">
-        <div className="flex justify-between items-center px-margin-edge w-full max-w-[1920px] mx-auto relative h-[60px]">
-          {/* Logo container overflowing the navbar slightly for a premium effect */}
-          <div className="flex items-center justify-start">
-            <a className="absolute left-4 md:left-8 top-0 flex flex-col items-center justify-center h-[100px] bg-black px-4 rounded-b-xl shadow-lg" href="#">
-              <img
-                alt="Aralis – Alfajores Artesanales"
-                className="w-auto object-contain h-14 md:h-20"
-                src="/aralis-logo.png"
-              />
-            </a>
-          </div>
-          <div className="flex-1 flex justify-end items-center space-x-4 md:space-x-6">
+        {/* Main bar */}
+        <div className="flex justify-between items-center w-full max-w-[1920px] mx-auto relative h-[60px] md:h-[70px] px-4 md:px-8">
+          {/* Mobile: Logo left + Hamburger right */}
+          {/* Desktop: Logo in overflow container */}
+
+          {/* Logo — mobile: inline, desktop: absolute overflow container */}
+          <a className="relative z-10 flex items-center md:absolute md:left-8 md:top-0 md:flex-col md:justify-center md:h-[120px] md:bg-black md:px-6 md:rounded-b-xl md:shadow-lg" href="#">
+            <img
+              alt="Aralis – Alfajores Artesanales"
+              className="w-auto object-contain h-10 md:h-24"
+              src="/aralis-logo.png"
+            />
+          </a>
+
+          {/* Desktop: action icons */}
+          <div className="hidden md:flex flex-1 justify-end items-center space-x-6">
             <button className="hover:opacity-80 transition-opacity p-2">
               <span className="material-symbols-outlined text-2xl">search</span>
             </button>
@@ -28,35 +37,54 @@ export default function Home() {
               <span className="absolute top-1 right-1 bg-white text-black text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
             </button>
           </div>
+
+          {/* Mobile: hamburger button */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center gap-[5px] p-2 z-10"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Abrir menú"
+          >
+            <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+          </button>
         </div>
+
+        {/* Desktop: nav links bar */}
         <div className="w-full border-t border-stone-800 py-3 hidden md:block">
           <nav className="flex justify-center items-center space-x-12 font-['Epilogue'] text-xs font-semibold tracking-[0.1em] uppercase">
-            <a className="hover:text-primary transition-colors" href="#">Inicio</a>
-            <a className="hover:text-primary transition-colors" href="#">Tienda Online</a>
-            <a className="hover:text-primary transition-colors" href="#">Contacto</a>
-            <a className="hover:text-primary transition-colors" href="#">Puntos de Venta</a>
-            <a className="hover:text-primary transition-colors" href="#">Trabaja con Nosotros</a>
+            <a className="hover:text-[#C68E4E] transition-colors" href="#">Inicio</a>
+            <a className="hover:text-[#C68E4E] transition-colors" href="#">Tienda Online</a>
+            <a className="hover:text-[#C68E4E] transition-colors" href="#">Contacto</a>
+            <a className="hover:text-[#C68E4E] transition-colors" href="#">Puntos de Venta</a>
+            <a className="hover:text-[#C68E4E] transition-colors" href="#">Trabaja con Nosotros</a>
+          </nav>
+        </div>
+
+        {/* Mobile: slide-down menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${mobileMenuOpen ? 'max-h-[400px] border-t border-stone-800' : 'max-h-0'}`}>
+          <nav className="flex flex-col items-center py-6 gap-5 font-['Epilogue'] text-sm font-semibold tracking-[0.1em] uppercase bg-black">
+            <a className="hover:text-[#C68E4E] transition-colors py-1" href="#" onClick={() => setMobileMenuOpen(false)}>Inicio</a>
+            <a className="hover:text-[#C68E4E] transition-colors py-1" href="#" onClick={() => setMobileMenuOpen(false)}>Tienda Online</a>
+            <a className="hover:text-[#C68E4E] transition-colors py-1" href="#" onClick={() => setMobileMenuOpen(false)}>Contacto</a>
+            <a className="hover:text-[#C68E4E] transition-colors py-1" href="#" onClick={() => setMobileMenuOpen(false)}>Puntos de Venta</a>
+            <a className="hover:text-[#C68E4E] transition-colors py-1" href="#" onClick={() => setMobileMenuOpen(false)}>Trabaja con Nosotros</a>
+            {/* Mobile menu icons */}
+            <div className="flex items-center gap-6 mt-2 pt-4 border-t border-stone-800 w-3/4 justify-center">
+              <button className="hover:opacity-80 transition-opacity p-2">
+                <span className="material-symbols-outlined text-2xl">search</span>
+              </button>
+              <button className="hover:opacity-80 transition-opacity p-2">
+                <span className="material-symbols-outlined text-2xl">person</span>
+              </button>
+              <button className="hover:opacity-80 transition-opacity p-2 relative">
+                <span className="material-symbols-outlined text-2xl">shopping_cart</span>
+                <span className="absolute top-1 right-1 bg-white text-black text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+              </button>
+            </div>
           </nav>
         </div>
       </header>
-
-      {/* Mobile BottomNavBar */}
-      <nav className="md:hidden fixed bottom-0 w-full bg-surface border-t border-outline-variant z-50 pb-safe">
-        <div className="flex justify-around items-center h-16 px-4">
-          <a className="flex flex-col items-center justify-center w-full h-full text-primary-container" href="#">
-            <span className="material-symbols-outlined fill-icon mb-1">storefront</span>
-            <span className="font-label-sm text-label-sm">Tienda</span>
-          </a>
-          <a className="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors" href="#">
-            <span className="material-symbols-outlined mb-1">inventory_2</span>
-            <span className="font-label-sm text-label-sm">Cajas</span>
-          </a>
-          <a className="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors" href="#">
-            <span className="material-symbols-outlined mb-1">info</span>
-            <span className="font-label-sm text-label-sm">Nosotros</span>
-          </a>
-        </div>
-      </nav>
 
       <main className="w-full pt-[100px]">
         {/* Promo Marquee */}
