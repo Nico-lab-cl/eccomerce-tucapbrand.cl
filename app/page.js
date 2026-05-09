@@ -11,13 +11,13 @@ export default function Home() {
       {/* TopNavBar */}
       <header className="fixed w-full top-0 z-[100] bg-white shadow-sm border-b border-stone-200">
         {/* Single bar: Logo | Nav Links | Icons */}
-        <div className="flex items-center justify-between w-full max-w-[1920px] mx-auto h-[70px] md:h-[80px] px-4 md:px-10">
+        <div className="flex items-center justify-between w-full max-w-[1920px] mx-auto h-[70px] md:h-[110px] px-4 md:px-10">
 
           {/* Logo */}
           <a className="flex-shrink-0 flex items-center" href="#">
             <img
               alt="Aralis – Alfajores Artesanales"
-              className="w-auto object-contain h-12 md:h-16"
+              className="w-auto object-contain h-14 md:h-28"
               src="/aralis-logo.png"
             />
           </a>
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="w-full pt-[80px] md:pt-[90px]">
+      <main className="w-full pt-[80px] md:pt-[120px]">
         {/* Promo Marquee */}
         <div className="w-full bg-[#C68E4E] text-white py-2.5 overflow-hidden flex whitespace-nowrap relative z-10 shadow-sm">
           <div className="animate-marquee inline-block font-['Epilogue'] text-sm tracking-widest uppercase font-semibold">
