@@ -10,9 +10,9 @@ export default function Home() {
           <div className="flex items-center justify-start">
             <a className="absolute left-4 md:left-8 top-0 flex flex-col items-center justify-center h-[100px] bg-black px-4 rounded-b-xl shadow-lg" href="#">
               <img
-                alt="Chocoblingblau Logo"
-                className="w-auto object-contain h-20"
-                src="https://lh3.googleusercontent.com/aida/ADBb0ujgIrScdYVy8rAlOSzi-bozZfvPFUnX7M815gC7R_BkYQKLwuGq0N8-rgvFw7BDK_-If0awFA9OYwnP6x6V4qPSpYuH9pB8chCR8yDudTNmyzN_NVhT6nHDvfrQTZblob0XFmUyOJhEicExPrs_I5no0p7CwFP4BUFfUv6SSlfeOnZDAeIlKguXaZOfNnQ-FZKSKinjFta8xmlrYZ3x-kCiNobD0ga2j92F_gVm9A8W93Uae57ImKTnpO3UC7I5heFgfFrWVMrfnQ"
+                alt="Aralis – Alfajores Artesanales"
+                className="w-auto object-contain h-14 md:h-20"
+                src="/aralis-logo.png"
               />
             </a>
           </div>
