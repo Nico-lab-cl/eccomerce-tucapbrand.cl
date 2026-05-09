@@ -101,8 +101,7 @@ export default function Home() {
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
             {/* Slide 1 (Video/GIF Background) */}
             <div
-              className="relative min-w-full h-full snap-start bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/hero-video.gif')" }}
+              className="relative min-w-full h-full snap-start bg-cover bg-center bg-no-repeat bg-[url('/hero-video.gif')] md:bg-[url('/hero-video-desktop.gif')]"
             ></div>
             {/* Slide 2 */}
             <div
