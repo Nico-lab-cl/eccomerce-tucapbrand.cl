@@ -114,8 +114,8 @@ export default function Home() {
             </div>
             {/* Slide 2 */}
             <div
-              className="relative min-w-full h-full snap-start bg-cover bg-center"
-              style={{ backgroundImage: "url('/alfajor-box.png')" }}
+              className="relative min-w-full h-full snap-start bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url('/slide-2.gif')" }}
             ></div>
             {/* Slide 3 */}
             <div
