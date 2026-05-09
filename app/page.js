@@ -100,9 +100,18 @@ export default function Home() {
         <section className="relative w-full h-[85vh] md:h-[calc(100vh-100px)] overflow-hidden group -mt-[40px]">
           <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style={{ msOverflowStyle: 'none' }}>
             {/* Slide 1 (Video/GIF Background) */}
-            <div
-              className="relative min-w-full h-full snap-start bg-cover bg-center bg-no-repeat bg-[url('/hero-video.gif')] md:bg-[url('/hero-video-desktop.gif')]"
-            ></div>
+            <div className="relative min-w-full h-full snap-start">
+              {/* Mobile */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+                style={{ backgroundImage: "url('/hero-video.gif')" }}
+              ></div>
+              {/* Desktop */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+                style={{ backgroundImage: "url('/hero-video-desktop.gif')" }}
+              ></div>
+            </div>
             {/* Slide 2 */}
             <div
               className="relative min-w-full h-full snap-start bg-cover bg-center"
