@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -11,7 +12,14 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo}>
-          Chocoblingblau
+          <Image
+            src="/aralis-logo.png"
+            alt="Aralis – Alfajores Artesanales"
+            width={160}
+            height={80}
+            className={styles.logoImg}
+            priority
+          />
         </Link>
 
         <div className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>

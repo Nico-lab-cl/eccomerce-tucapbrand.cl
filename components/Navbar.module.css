@@ -19,11 +19,20 @@
 }
 
 .logo {
-  font-family: var(--font-headline);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--dark-chocolate);
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover .logoImg {
+  opacity: 0.8;
 }
 
 .links {
@@ -123,5 +132,9 @@
 
   .shopBtn {
     display: none;
+  }
+
+  .logoImg {
+    width: 110px;
   }
 }
