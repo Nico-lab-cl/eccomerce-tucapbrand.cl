@@ -86,14 +86,14 @@ export default function Home() {
         {/* Promo Marquee */}
         <div className="w-full bg-[#C68E4E] text-white py-2.5 overflow-hidden flex whitespace-nowrap relative z-10 shadow-sm">
           <div className="animate-marquee inline-block font-['Epilogue'] text-sm tracking-widest uppercase font-semibold">
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envíos a todo el país 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ¡ENVÍO GRATIS EN LA V REGION POR COMPRAS SOBRE $40.000! | Envios a todo el pais 🚚 🇨🇱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         </div>
         {/* Hero Section (Carousel) */}
